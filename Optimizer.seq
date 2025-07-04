@@ -1,0 +1,69 @@
+set vig
+aut
+WFR y
+
+
+mxc 40
+mnc 20
+MNA 0.1
+MNE 1.2
+MXA 45
+
+!int 
+!dra
+efl=2
+imc = 2
+oal s1..i < 60
+aoi si r1 <0.5 >-0.5
+
+
+CT S1 < 3 >1.5
+CT S2 < 3 >1.5
+!CT S4 < 2 > 1
+!CT S5 < 5.5
+CT S6 > 1 < 3
+!CT S7 < 2 > 0.1
+CT S12 > 1
+
+RDY S5 > 0
+RDY S6 < 0
+
+AOI S5 < 45
+AOR S5 < 45
+AOI S17 <45
+AOI S6 < 45
+AOR S6 < 45
+
+!ET S5 > 2.9
+!ET S9 > 1.75
+!ET S13 > 2.7
+!ET S11 > 2.7
+
+!@v1 == (SN2 S18)
+!@v1 = 0
+!wtc 0.05
+
+
+SN2 S18 < 0.0062
+SN2 S17 < 0.07
+!SN2 S16 < 0.001
+!SN2 S15 < 0.033
+!SN2 S14 < 0.06
+!SN2 S13 < 0.024
+!SN2 S12 < 0.0488
+!SN2 S11 < 0.002
+!SN2 S10 < 0.0020
+!SN2 S9  < 0.0065
+!SN2 S7  < 0.05e-5
+!SN2 S6  < 0.079
+!SN2 S5  < 0.089
+!SN2 S4  < 0.001
+!SN2 S3  < 0.002
+!SN2 S2  < 0.019
+!SN2 S1  < 0.0042
+
+GLA SO..I NFK5 NSK16 NLASF41 SF6 ! CODE V default —most restrictive
+!GLA SO..I nfk5 nsk16 NLAK33 NLASF31 SFL57 ! more realistic
+!GLA SO..I KFIR100UVM KLAFK58 JLASF08A TAFD65 KPSFN173M ! medium extreme
+go
+
